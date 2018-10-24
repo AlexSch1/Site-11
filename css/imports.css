@@ -1,4 +1,7 @@
 /*popup*/
+@import url('../css/slick/slick.css');
+@import url('../css/slick/slick-theme.css');
+
 @import url('../js/scroll/jquery.mCustomScrollbar.min.css');
 @import url('../js/popup/air-picker/dist/css/datepicker.css');
 @import url('../css/owl.carousel.min.css');

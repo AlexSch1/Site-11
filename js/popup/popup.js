@@ -15,11 +15,13 @@ $(document).ready(function () {
 	});
 
 	owlMobNav.on('changed.owl.carousel', function(event) {
-		console.log(event.item.index)
+		
 	});
 
 	//service
 	$('.service-menu__subheader').on('click', function(EO) {
+
+		let heightHeaderService = $('.block-header').height();
 		$('.toggle-box').hide();
 		$(this).next('div').show();
 		if ($(this).hasClass('minus')) {
@@ -30,12 +32,18 @@ $(document).ready(function () {
 			$(this).addClass('minus');
 		}
 		var $this = $(this);
-		if (!$this.closest('.popup-main').length) $('html').animate({ scrollTop: $this.offset().top}, 500);
-		else {			
-			var topMargin = $('.service-menu').offset().top;
-			$('.service-menu').scrollTop(0);
-			$('.service-menu').scrollTop($this.offset().top - topMargin - 10);
-		}		
+		if (!$this.closest('.popup-main').length) {
+			$('body').scrollTop(0);
+      		$('body').scrollTop($this.offset().top);
+		    return;
+
+
+	    }
+	    else {      
+	      var topMargin = $('.popup-main').offset().top;
+	      $('.popup-main').scrollTop(0);
+	      $('.popup-main').scrollTop($this.offset().top);
+	    }
 	});
 
 	//Calender
@@ -82,16 +90,65 @@ $(document).ready(function () {
 
 	writeDate();
 
-	owl.on('changed.owl.carousel', function(event) {
+	owl.on('translated.owl.carousel', function(event) {
 		var count = $('.active .item').data('number');
-	
+		let mon = new Date().getMonth();
+		mon = mon + 1;
+		let y = new Date().getFullYear();
+
+
+
+		let itemS = $('.calender-wrap .owl-item.active').index();
+
+		 var item      = event.item.index; 
+		console.log(item)
+
+		function calenderSlideViwe(value) {
+			
+			if (value === 0) {
+				mon = new Date().getMonth();
+				datepicker.date = new Date(y, mon);
+				
+			} else if (value === 1) {
+				//mon = mon + 1;
+				datepicker.date = new Date(y, mon);
+			} else {
+				mon = mon + 1;
+				datepicker.date = new Date(y, mon);
+			}
+
+
+		}
+
 		if (event.item.index === monthCounter) return;
 		if (monthCounter >= event.item.index) {
+			--count;
+			calenderSlideViwe(item);
+			countCalender--;
+		} else {
+			++count;
+			calenderSlideViwe(item);
+			countCalender++;
+		}
+
+		monthCounter = event.item.index;
+
+
+
+		return;
+
+
+
+		if (event.item.index === monthCounter) return;
+		if (monthCounter >= event.item.index) {
+			count--;
 			datepicker.prev();
 			countCalender--;
 		} else {
+			count++;
 			datepicker.next();
 			countCalender++;
+			
 		}
 		monthCounter = event.item.index;
 	});
@@ -231,6 +288,7 @@ $(document).ready(function () {
 	var master = '0';
 
 	$('.btn-popup').on('click', function(EO) {
+
 		EO.preventDefault();
 		openPopUp();
 		scrollControl();
@@ -312,11 +370,10 @@ $(document).ready(function () {
 
 	$('.btn-reserv').on('click', function() {
 		let _this = this;
-		$('html, body').animate({
-	        scrollTop: $(".title-main").offset().top
-	    }, 70);
+		
 		viwe(_this, true);
 		writeValueInHideInput(_this);
+		$(".popup-main").animate({ scrollTop: 0 }, 0);
 		return false;
 	});
 
@@ -508,6 +565,10 @@ $(document).ready(function () {
 	}
 	scrollControl();
 
+	$('.button8').on('click', function() {
+		$('html, body').scrollTop(0);
+	});
+
 
 
 });
@@ -540,3 +601,4 @@ $(document).ready(function () {
 // }, 250);
 
 // window.addEventListener('mousewheel', myEfficientFn);
+

@@ -165,7 +165,7 @@
 	
 
 	.section-alike {
-	    top: 120px;
+	    top: 130px;
 	    margin-bottom: 120px;
 	}
 
@@ -232,7 +232,15 @@
 	    font-size: 14px !important;
 	}
 
+	.section-alike {
+	    top: 125px;
+	}
+
 }
 
-
+@media only screen and (max-width : 320px) {
+	.section-alike {
+	    top: 130px;
+	}
+}
 

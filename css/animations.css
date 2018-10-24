@@ -433,9 +433,7 @@ select#itc-widget-code{
 	z-index: -1;
 }
 
-.hover_info{
-	padding: 20px 14%;
-}
+
 @media screen and (max-width: 1890px) {
 	
 	.hover_info{
@@ -511,7 +509,7 @@ select#itc-widget-code{
 		transform: none;
 	}
 	.about-thanks{
-	    transform: none;
+	    transform: translateY(15%);
 	    bottom: auto;
 	}
 	.block-header-big, .main-frame1 .block-header, .main-frame2 .block-header{
@@ -543,6 +541,14 @@ select#itc-widget-code{
 		/*margin-top: 200px;*/
 		/*font-size: 29px;*/
 	}
+
+	.about-thanks {
+	    transform: translateY(120%);
+	    bottom: auto;
+	}
+	.about-thanks {
+	    padding-top: 0px;
+	}
 }
 
 
@@ -554,6 +560,49 @@ select#itc-widget-code{
 /*=======================================================================================================
   =================================================FIX alex======================================================
   ======================================================================================================= */
+.page-service-fu .service-menu__header{
+	top: calc(6vh + 260px);
+}
+
+.team-content-wrapper {
+    height: auto;
+}
+@media only screen and (max-width : 1023px) {
+	.team-content-wrapper {
+	    height: 100%;
+	}
+}
+
+
+
+.datepicker-here {
+	overflow: hidden;
+}
+
+.datepicker-here {
+	background-color: #f6f6f6;
+}
+
+.prev-txt {
+	margin-bottom: 2px;
+}
+
+.body-service-fu {
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrap-s {
+	flex: 1 0 auto;
+}
+
+.body-service-fu .footer-other-page {
+	flex: 0 0 auto;
+	margin-bottom: 15px;
+}
+
+
 .active-page {
 	color: #d2ab66;
 	position: relative;
@@ -831,7 +880,12 @@ select#itc-widget-code{
 .page-team-fun .footer-other-page, .page-news-fun .footer-other-page, .page-about-fu .footer-other-page{
     z-index: 50;
 }
+@media screen and (max-width: 1750px) {
+	.page-service-fu .service-menu__header {
+	    top: calc(4vh + 260px);
+	}
 
+}
 
 @media screen and (max-width: 1600px) {
 	.footer-other-page .social__insta, .footer-other-page .social__tel {
@@ -1037,7 +1091,10 @@ select#itc-widget-code{
 @media screen and (max-width: 1023px) {
 
 
-
+	.logo-white {
+	    width: 120px;
+	    height: 70.32px;
+	}
 
 	/**/
 		.page-other .section-main .nav__elem  {
@@ -1438,6 +1495,11 @@ select#itc-widget-code{
         height: 40px;
     }
 
+    .logo-white {
+	    width: 90px;
+	    height: 52.74px;
+	}
+
     .section-main__vid {
 	    margin: 20px 0;
 	}
@@ -1494,10 +1556,7 @@ select#itc-widget-code{
 		justify-content: center;
 	}
 
-	.about-thanks {
-	    padding-top: 0px;
-	    transform: translateY(-50%);
-	}
+
 
 	.index-sliding-fr__h-w {
 		max-width: 100%;
@@ -1896,11 +1955,9 @@ select#itc-widget-code{
 	}
 
 	.btn-big span {
-	    padding-top: 2px;
+	    padding-top: 0px;
 	}
-
-
-
+	
 
 }
 @media screen and (max-width: 480px) {
@@ -1985,16 +2042,14 @@ select#itc-widget-code{
 
 .about .group_text {
     margin-top: 75px;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
 }
 
 	.btn-big span {
 		padding-top: 0px !important;
 	}
 
-	.page-about-fu .popup-main .btn-big span {
-	    padding-bottom: 1px !important;
-	}
+	
 
 	.menu-popup .nav__elem {
 	    padding-top: 12px !important;
@@ -2089,7 +2144,7 @@ select#itc-widget-code{
 	}
 
 	.about-thanks {
-	    transform: translateY(100%);
+	        transform: translateY(110%);
 	}
 
 	.page-about-fu .popup-main .btn-big span {
@@ -2148,9 +2203,6 @@ select#itc-widget-code{
 	}
 
 }
-
-
-
 
 
 

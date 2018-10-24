@@ -278,10 +278,11 @@ $(document).ready(function () {
     $(window).resize(changeZoomMap);
 
     function changeZoomMap() {
+
         let width = $(window).width();
         if ( (width < 1400) && (width > 768) ) {
            myMap.setZoom(13.5, {duration: 0});
-        } else if  ( (width < 768) && (width > 480) ) {
+        } else if  ( (width <= 768) && (width > 480) ) {
             myMap.setZoom(13.5, {duration: 0});
         } else if (width  < 480) {
             myMap.setZoom(12.5, {duration: 0});

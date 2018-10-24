@@ -348,9 +348,14 @@ span.nav__elem:after {
         height: 550px;
         max-height: 550px;
     }
-
-    
 }
+@media only screen and (max-width : 1280px) {
+    .one-third-block .item-news {
+        height: 540px;
+        max-height: 540px;
+    }
+}
+
 @media only screen and (max-width : 1200px) {
     .page-team .one-third-block-second {
         margin-top: 35px;
@@ -1010,6 +1015,8 @@ span.nav__elem:after {
     .service-menu__header.team-menu__header.desktop-only {
         top: calc(1vh + 330px);
     }
+
+
 }
 
 @media only screen and (max-width: 1024px) {

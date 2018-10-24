@@ -18,3 +18,10 @@ menuButton.addEventListener('click', function(event) {
     menuPopup.classList.add('opened');
     html.style.overflowY = 'hidden';
 });
+
+$('.btn-popup').on('click', function() {
+	event.preventDefault();
+    menuPopup.classList.remove('closed');
+    menuPopup.classList.add('opened');
+    html.style.overflowY = 'hidden';
+})

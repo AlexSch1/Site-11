@@ -831,6 +831,16 @@
         margin-top: 20px;
     }
 
+    .calender-wrap {
+        height: 600px;
+        overflow: hidden;
+        overflow-x: initial;
+    }
+
+    .bar-popup {
+        min-height: 600px;
+    }
+
 
 
 }
@@ -866,8 +876,15 @@
 
 @media only screen and (max-width : 480px) {
 
+
+
     .bar-popup {
-        min-height: 308px;
+        min-height: 368px;
+    }
+
+    .calender-wrap {
+        height: 435px;
+        min-height: 435px;
     }
 
     /*title*/
@@ -1227,6 +1244,10 @@
         top: 34px;
         right: 20px;
     }
+
+    .bar-title {
+    min-height: 213px;
+}
 }
 
 @media only screen and (max-width: 378px){ 
@@ -1318,7 +1339,16 @@
     }
 
     .bar-popup {
-        min-height: 378px;
+        min-height: 390px;
+    }
+
+    .calender-wrap {
+        height: 390px;
+        min-height: 390px;
+    }
+
+    .contact-thanks {
+        background-color: #fff;
     }
 } 
 
